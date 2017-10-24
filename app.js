@@ -26,7 +26,8 @@ function determineOutput()
             break;
 
         case '3':
-            
+            deleteMessage();
+            showMessages();
             break;
 
         default: 
@@ -64,6 +65,26 @@ function addMessage()
     let new_message = prompt('Enter a new message: ');
     message_list.push(new_message);
 }
+
+function deleteMessage()
+{
+    let remove_index;
+
+   
+    remove_index = prompt('Enter the message index between 1'+' - '+`${message_list.length}`);
+            
+    while((remove_index > 5 ) || (remove_index < 1)  )
+    {
+        remove_index = prompt('Invalid input. Enter the message index between 1'+' - '+`${message_list.length}`);
+    }
+    
+    //first parameter in splice is the index to remove.
+    message_list.splice(remove_index - 1, 1);
+
+   
+    
+}
+
 
 function invalidInput()
 {
