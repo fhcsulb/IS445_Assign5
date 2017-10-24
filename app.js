@@ -20,6 +20,14 @@ function determineOutput()
             showMessages();
             break;
 
+        case '2':
+            addMessage();
+            showMessages();
+            break;
+
+        case '3':
+            
+            break;
 
         default: 
             invalidInput();
@@ -49,6 +57,12 @@ function showMessages()
     
     document.getElementById("output").innerHTML = result;
 
+}
+
+function addMessage()
+{
+    let new_message = prompt('Enter a new message: ');
+    message_list.push(new_message);
 }
 
 function invalidInput()
