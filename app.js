@@ -42,7 +42,7 @@ function determineOutput()
 
         // user input some invalid value
         default: 
-            alert('Your input is: ' + message+' is invalid');
+            alert('Your input ' + message+' is invalid');
             invalidInput();
 
 
