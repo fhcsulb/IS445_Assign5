@@ -14,19 +14,16 @@ function determineOutput()
     {   
         // user input 0
         case '0':
-            alert('Your input is: ' + message);
             quit();
             break;
 
         // user input 1
         case '1':
-             alert('Your input is: ' + message);
             showMessages();
             break;
 
         // user input 2
         case '2':
-            alert('Your input is: ' + message);
             addMessage();
 
             // new message is added to the end of the array. Function call to display it is here. 
@@ -35,15 +32,14 @@ function determineOutput()
 
         // user input 3
         case '3':
-            alert('Your input is: ' + message);
             deleteMessage();
             showMessages();
             break;
 
         // user input some invalid value
         default: 
-            alert('Your input ' + message+' is invalid');
             invalidInput();
+            break;
 
 
     } 
@@ -108,7 +104,7 @@ function deleteMessage()
 // Output will prompt the user that they need to provide a valid input. 
 function invalidInput()
 {
-    document.getElementById("output").innerHTML = "Please refresh and select a valid command.";
+    document.getElementById("output").innerHTML = "Your input "+message+ " is invalid. Please refresh and select a valid command.";
 }
 
 
